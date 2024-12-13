@@ -5,6 +5,8 @@ import './App.css'
 import data from "./data"
 
 function App() {
+
+  //METHOD 1:
     // const entries = data.map((entry) => { return <Entry
     //     key={entry.id}
     //     img= {entry.img} 
@@ -14,14 +16,18 @@ function App() {
     //     googleMapsLink = {entry.googleMapsLink}
     //     text= {entry.text} /> })
 
-    //alternate method is this, and then wherever we used props.<property>, we must replace with props.entry.<property>
-    
+    //METHOD 2: alternate method is this, and then wherever we used props.<property>, we must replace with props.entry.<property>
 
     const entries = data.map((entry) => { return <Entry
         key={entry.id}
         entry ={entry} /> })
+    //Method 3 : 
+    //const entries = data.map((entry) => { return <Entry
+    //   key={entry.id}
+    //   {...entry} /> }) 
+    // This is called spread syntax, this basically does the same as method 1, but in a more consise way. we dont need to use props.entry.<property>. we can just use props.<property> like in method 1.
 
-
+    
   return (
       <>
         <Header/>
