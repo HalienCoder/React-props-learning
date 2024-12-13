@@ -41,6 +41,7 @@ nav > span {
 article {
   display: flex;
   align-items: center;
+  margin-bottom: 36px;
 }
 .image-div  {
   width: 125px;
