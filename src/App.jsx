@@ -5,14 +5,22 @@ import './App.css'
 import data from "./data"
 
 function App() {
+    // const entries = data.map((entry) => { return <Entry
+    //     key={entry.id}
+    //     img= {entry.img} 
+    //     title={entry.title} 
+    //     country={entry.country} 
+    //     dates={entry.dates} 
+    //     googleMapsLink = {entry.googleMapsLink}
+    //     text= {entry.text} /> })
+
+    //alternate method is this, and then wherever we used props.<property>, we must replace with props.entry.<property>
+    
+
     const entries = data.map((entry) => { return <Entry
         key={entry.id}
-        img= {entry.img} 
-        title={entry.title} 
-        country={entry.country} 
-        dates={entry.dates} 
-        googleMapsLink = {entry.googleMapsLink}
-        text= {entry.text} /> })
+        entry ={entry} /> })
+
 
   return (
       <>
